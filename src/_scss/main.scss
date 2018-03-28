@@ -1,0 +1,22 @@
+@charset "utf-8";
+// sass-lint:disable-all
+
+// Import Assets and Variables
+// -----------------------------
+@import "bootstrap-variables"; // variables to override
+@import "./node_modules/bootstrap/scss/functions"; // default functions from Bootstrap
+@import "./node_modules/bootstrap/scss/variables"; // default variables from Bootstrap
+@import "bootstrap-custom"; // import of the Bootstrap scss components (only uncomment the necessary ones)
+
+// Import Basics
+// -----------------------------
+
+// Import Components
+// -----------------------------
+
+// Import Specificity
+// -----------------------------
+@import "shame";
+
+// View
+// -----------------------------

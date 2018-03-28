@@ -1,0 +1,7 @@
+build
+.sass-cache
+.jekyll-metadata
+.DS_Store
+node_modules
+src/_temp
+src/_articles

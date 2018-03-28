@@ -1,0 +1,11 @@
+---
+layout: default
+permalink: "/blog/"
+title: "Articles"
+---
+
+<ul>
+	{% for article in site.articles %}
+	<li><a href="/blog/{{ article.slug }}/" ">{{ article.fields.title }}</a></li>
+	{% endfor %}
+</ul>

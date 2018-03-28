@@ -1,0 +1,49 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.fields.title %}{{ page.fields.title | escape }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | escape }}{% endif %}</title>
+	<meta name="description" content="{% if page.fields.description %}{{ page.fields.description }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<!-- Disable tap highlight on IE -->
+	<meta name="msapplication-tap-highlight" content="no">
+
+	<!-- Web Application Manifest -->
+	<link rel="manifest" href="manifest.json">
+
+	<link rel="icon" type="image/png" href="/img/meta/favicon.ico" sizes="32x32">
+
+	<meta property="og:title" content="{% if page.fields.title %}{{ page.fields.title | escape }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | escape }}{% endif %}">
+	<meta property="og:description" content="{% if page.fields.description %}{{ page.fields.description }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="{% if page.og %}{{ page.og }}{% elsif page.fields.cover %}{{ page.fields.cover.fields.file.url }}{% else %}{% endif %}">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="">
+	<meta name="twitter:title" content="{% if page.fields.title %}{{ page.fields.title | escape }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | escape }}{% endif %}">
+	<meta name="twitter:description" content="{% if page.fields.description %}{{ page.fields.description }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="twitter:creator" content="">
+	<meta name="twitter:image:src" content="{% if page.og %}{{ page.og }}{% elsif page.fields.cover %}{{ page.fields.cover.fields.file.url }}{% else %}{% endif %}">
+
+	<!-- Color the status bar on mobile devices -->
+	<meta name="theme-color" content="#FFF">
+	<meta name="msapplication-TileImage" content="img/meta/mstile-144x144.png">
+
+	<style>
+		{% include_absolute _temp/css/naddymess-website-critical.css %}
+	</style>
+
+	<script type="text/javascript">
+		/*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+		!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);
+		loadCSS("/{% if site.data['rev-manifest']['css/naddymess-website.min.css']%}{{site.data.['rev-manifest']['css/naddymess-website.min.css']}}{%else%}css/naddymess-website.css{%endif%}");
+	</script>
+
+	<noscript>
+		<link type="text/css" href="/{% if site.data['rev-manifest']['css/naddymess-website.min.css']%}{{site.data.['rev-manifest']['css/naddymess-website.min.css']}}{%else%}css/naddymess-website.css{%endif%}" rel="stylesheet">
+	</noscript>
+
+	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+</head>

@@ -1,0 +1,25 @@
+{
+  "name": "Naddymess",
+  "short_name": "Naddymess",
+  "icons": [
+    {
+      "src": "img/meta/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "img/meta/favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    },
+    {
+      "src": "img/meta/splash-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2b7de8"
+}
