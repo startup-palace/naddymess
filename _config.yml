@@ -24,7 +24,7 @@ github_username:
 lang: fr
 
 # Build settings
-permalink: pretty
+# permalink: pretty
 markdown: kramdown
 exclude:
   - Gemfile
