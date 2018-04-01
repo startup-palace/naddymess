@@ -19,7 +19,7 @@
 
 - get the ID your Contentful space
 - get an access token to your Contentful space
-- `CONTENTFUL_SPACE="e2p0wol8qagf" CONTENTFUL_TOKEN="<your-access-token>" node contentful.js`
+- `CONTENTFUL_SPACE="<your-space-id>" CONTENTFUL_TOKEN="<your-access-token>" node contentful.js`
 
 You can also set the following environment variables:
 
@@ -32,4 +32,3 @@ You can also set the following environment variables:
 - Repository > Tags
 - create a new tag (use a new version number as tag name)
 - wait a few minutes
-
