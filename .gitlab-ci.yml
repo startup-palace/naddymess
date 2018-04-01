@@ -1,0 +1,20 @@
+variables:
+  DEBIAN_FRONTEND: noninteractive
+  NODE_VERSION: 9
+
+build:
+  stage: build
+  image: ruby:2.4.3-stretch
+  script:
+    - curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
+    - apt-get install -y nodejs
+    - npm install
+    - bundle install
+    #- node contentful.js
+    - ./node_modules/.bin/gulp --env production
+  artifacts:
+    name: "$CI_PROJECT_NAME-$CI_COMMIT_SHA"
+    paths:
+      - build/
+  tags:
+    - docker
