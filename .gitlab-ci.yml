@@ -12,6 +12,10 @@ build:
     - bundle install
     #- node contentful.js
     - ./node_modules/.bin/gulp --env production
+  cache:
+    paths:
+      - node_modules/
+    key: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
   artifacts:
     name: "$CI_PROJECT_NAME-$CI_COMMIT_SHA"
     paths:
