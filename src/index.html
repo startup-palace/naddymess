@@ -4,8 +4,6 @@ layout: default
 
 {% assign sorted_articles = site.articles | sort: 'fields.published_at' | reverse %}
 
-{% include header.html %}
-
 <main class="main pt-4" role="main">
 
   <div class="container">
@@ -31,51 +29,9 @@ layout: default
         </div>
 
       </div>
-      <div class="col-md-3 ml-auto">
 
-        <aside class="sidebar">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title">À propos</h4>
-              <p class="card-text">{{ site.description }}</p>
-            </div>
-          </div><!-- /.card -->
-        </aside>
+      {% include aside.html %}
 
-        {% comment %}
-        <aside class="sidebar sidebar-sticky">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title">Tags</h4>
-              <a class="btn btn-light btn-sm mb-1" href="#">Journey</a>
-              <a class="btn btn-light btn-sm mb-1" href="#">Work</a>
-              <a class="btn btn-light btn-sm mb-1" href="#">Lifestype</a>
-              <a class="btn btn-light btn-sm mb-1" href="#">Photography</a>
-              <a class="btn btn-light btn-sm mb-1" href="#">Food & Drinks</a>
-            </div>
-          </div><!-- /.card -->
-          <div class="card mb-4">
-            <div class="card-body">
-              <h4 class="card-title">Popular stories</h4>
-
-              <a href="post-image.html" class="d-inline-block">
-                <h4 class="h6">The blind man</h4>
-                <img class="card-img" src="img/2.jpg" alt="" />
-              </a>
-              <time class="timeago" datetime="2017-10-03 20:00">3 october 2017</time> in Lifestyle
-
-              <a href="post-image.html" class="d-inline-block mt-3">
-                <h4 class="h6">Crying on the news</h4>
-                <img class="card-img" src="img/3.jpg" alt="" />
-              </a>
-              <time class="timeago" datetime="2017-07-16 20:00">16 july 2017</time> in Work
-
-            </div>
-          </div><!-- /.card -->
-        </aside>
-        {% endcomment %}
-
-      </div>
     </div>
   </div>
 
