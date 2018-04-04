@@ -3,11 +3,11 @@
     <div class="card-meta">
       <a href="#"><time class="timeago" datetime="{{ article.fields.published_at }}">{{ article.fields.published_at | localize: "%d %B %Y" }}</time></a>{% comment %} in <a href="#">Journey</a>{% endcomment %}
     </div>
-    <a href="post-image.html">
+    <a href="{{ article.url | relative_url }}">
       <h4 class="card-title">{{ article.fields.title }}</h4>
     </a>
   </header>
-  <a href="post-image.html">
+  <a href="{{ article.url | relative_url }}">
     <img class="card-img" src="{{ article.fields.cover.fields.file.url }}" alt="" />
   </a>
   <div class="card-body">
