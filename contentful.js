@@ -10,10 +10,10 @@ const locale = process.env.CONTENTFUL_LOCALE || 'fr-FR';
 const space = process.env.CONTENTFUL_SPACE;
 const accessToken = process.env.CONTENTFUL_TOKEN;
 const outputDir = process.env.OUTPUT_DIR || 'src';
-const contentIds = ['post'];
-const contentFields = {'post': 'content'};
-const slugFields = {'post': 'slug'};
-const folderName = {'post': '_articles'};
+const contentIds = ['post', 'tag'];
+const contentFields = { 'post': 'content', 'tag': 'description' };
+const slugFields = { 'post': 'slug', 'tag': 'slug' };
+const folderName = { 'post': '_articles', 'tag': '_tags' };
 
 /**********************************************/
 

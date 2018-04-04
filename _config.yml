@@ -45,7 +45,10 @@ destination:      build
 collections:
   articles:
     output: true
-    permalink: /blog/:name/
+    permalink: /:name/
+  tags:
+    output: true
+    permalink: /tag/:name/
 
 defaults:
   - scope:
@@ -53,3 +56,8 @@ defaults:
       type: "articles"
     values:
       layout: "articles"
+  - scope:
+      path: ""
+      type: "tags"
+    values:
+      layout: "tags"
