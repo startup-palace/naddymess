@@ -22,3 +22,17 @@ build:
       - build/
   tags:
     - docker
+
+deploy_preprod:
+  stage: deploy
+  image: php:7.2-cli
+  environment:
+    name: prod
+    url: https://naddymess.spapp.fr/
+  script:
+    - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
+    - php deployer.phar deploy preprod
+  tags:
+    - docker
+  only:
+    - master
