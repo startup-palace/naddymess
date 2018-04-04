@@ -1,0 +1,16 @@
+<article class="card mb-4">
+  <header class="card-header">
+    <div class="card-meta">
+      <a href="#"><time class="timeago" datetime="{{ article.fields.published_at }}">{{ article.fields.published_at | localize: "%d %B %Y" }}</time></a>{% comment %} in <a href="#">Journey</a>{% endcomment %}
+    </div>
+    <a href="post-image.html">
+      <h4 class="card-title">{{ article.fields.title }}</h4>
+    </a>
+  </header>
+  <a href="post-image.html">
+    <img class="card-img" src="{{ article.fields.cover.fields.file.url }}" alt="" />
+  </a>
+  <div class="card-body">
+    <p class="card-text">{{ article.fields.excerpt }}</p>
+  </div>
+</article><!-- /.card -->
