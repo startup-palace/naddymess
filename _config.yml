@@ -18,8 +18,12 @@ description: L’actualité startup et innovation disruptée avec bienveillance.
 footer: Tous droits réservés, les rageux ragent
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-facebook_username:
-twitter_username:
+facebook:
+  username: Naddymess-793061100890049
+twitter:
+  username: naddymess
+linkedin:
+  username: "28174415"
 
 lang: fr
 
