@@ -15,6 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Naddymess
 description: L’actualité startup et innovation disruptée avec bienveillance.
+email: disruption@naddymess.fr
 footer: Tous droits réservés, les rageux ragent
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com

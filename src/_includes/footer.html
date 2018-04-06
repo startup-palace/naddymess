@@ -1,6 +1,7 @@
 <footer class="site-footer bg-darkest" role="contentinfo">
   <div class="container">
     <div class="copy">
+      <a href="mailto:{{ site.email | encode_email }}">Contact</a>
       &copy; Naddymess {{ site.time | date: '%Y' }}<br />
       {{ site.footer }}
     </div>
