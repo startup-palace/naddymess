@@ -1,8 +1,9 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
   NODE_VERSION: 9
+  PREPROD_URL: https://naddymess.spapp.fr/
 
-build:
+build_preprod:
   stage: build
   image: ruby:2.4.3-stretch
   script:
@@ -10,6 +11,7 @@ build:
     - apt-get install -y nodejs
     - npm install
     - bundle install
+    - 'echo url: \"$PREPROD_URL\" >> _config.yml'
     - node contentful.js
     - ./node_modules/.bin/gulp --env production
   cache:
@@ -25,10 +27,12 @@ build:
 
 deploy_preprod:
   stage: deploy
+  dependencies:
+    - build_preprod
   image: php:7.2-cli
   environment:
     name: prod
-    url: https://naddymess.spapp.fr/
+    url: $PREPROD_URL
   script:
     - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
     - php deployer.phar deploy preprod

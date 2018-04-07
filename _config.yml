@@ -19,12 +19,15 @@ email: disruption@naddymess.fr
 footer: Tous droits réservés, les rageux ragent
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
 facebook:
   username: Naddymess-793061100890049
 twitter:
   username: naddymess
 linkedin:
   username: "28174415"
+oglocale: fr_FR
+logo: /img/logo/naddymess.png
 
 lang: fr
 
@@ -60,6 +63,7 @@ defaults:
       path: ""
       type: "articles"
     values:
+      ogtype: "article"
       layout: "articles"
   - scope:
       path: ""
