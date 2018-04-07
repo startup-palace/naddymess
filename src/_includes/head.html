@@ -18,7 +18,7 @@
   <meta property="og:description" content="{% if page.fields.description %}{{ page.fields.description }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta property="og:type" content="{{ page.ogtype | default: "website" }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{% if page.og %}{{ page.og | absolute_url }}{% elsif page.fields.cover %}{{ page.fields.cover.fields.file.url }}{% else %}{{ site.og | absolute_url }}{% endif %}">
+  <meta property="og:image" content="{% if page.og %}{{ page.og | absolute_url }}{% elsif page.fields.cover %}https:{{ page.fields.cover.fields.file.url }}{% else %}{{ site.og | absolute_url }}{% endif %}">
   <meta property="og:locale" content="{{ page.oglocale | default: site.oglocale }}" />
   <meta property="og:site_name" content="{{ site.title }}" />
 
