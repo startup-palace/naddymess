@@ -1,7 +1,7 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
   NODE_VERSION: 9
-  PREPROD_URL: https://naddymess.spapp.fr/
+  PREPROD_URL: https://naddymess.spapp.fr
 
 build_preprod:
   stage: build
