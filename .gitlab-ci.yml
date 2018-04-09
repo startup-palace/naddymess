@@ -27,12 +27,14 @@ variables:
     - docker
 
 build_preprod:
+  <<: *build
   variables:
     URL: $PREPROD_URL
   script:
     - ls build/
 
 build_prod:
+  <<: *build
   variables:
     URL: $PROD_URL
   script:
