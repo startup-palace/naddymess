@@ -13,6 +13,7 @@ variables:
     - npm install
     - bundle install
     - 'echo url: \"$URL\" >> _config.yml'
+    - 'echo ga: $GA >> _config.yml'
     - node contentful.js
     - ./node_modules/.bin/gulp --env production
   cache:
@@ -30,6 +31,7 @@ build_preprod:
   <<: *build
   variables:
     URL: $PREPROD_URL
+    GA: false
   script:
     - ls build/
 
@@ -37,6 +39,7 @@ build_prod:
   <<: *build
   variables:
     URL: $PROD_URL
+    GA: true
   script:
     - ls build/
   only:
