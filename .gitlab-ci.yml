@@ -2,22 +2,23 @@ variables:
   DEBIAN_FRONTEND: noninteractive
   NODE_VERSION: 9
   PREPROD_URL: https://naddymess.spapp.fr
+  PROD_URL: https://www.naddymess.fr
 
-build_preprod:
+.build: &build
   stage: build
   image: ruby:2.4.3-stretch
-  script:
+  before_script:
     - curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
     - apt-get install -y nodejs
     - npm install
     - bundle install
-    - 'echo url: \"$PREPROD_URL\" >> _config.yml'
+    - 'echo url: \"$URL\" >> _config.yml'
     - node contentful.js
     - ./node_modules/.bin/gulp --env production
   cache:
     paths:
       - node_modules/
-    key: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+    key: "build-$CI_COMMIT_REF_NAME"
   artifacts:
     name: "$CI_PROJECT_NAME-$CI_COMMIT_SHA"
     paths:
@@ -25,13 +26,27 @@ build_preprod:
   tags:
     - docker
 
+build_preprod:
+  variables:
+    URL: $PREPROD_URL
+  script:
+    - ls build/
+
+build_prod:
+  variables:
+    URL: $PROD_URL
+  script:
+    - ls build/
+  only:
+    - master
+
 deploy_preprod:
   stage: deploy
   dependencies:
     - build_preprod
   image: php:7.2-cli
   environment:
-    name: prod
+    name: preprod
     url: $PREPROD_URL
   script:
     - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
@@ -40,3 +55,20 @@ deploy_preprod:
     - docker
   only:
     - master
+
+deploy_prod:
+  stage: deploy
+  dependencies:
+    - build_prod
+  image: php:7.2-cli
+  environment:
+    name: prod
+    url: $PROD_URL
+  script:
+    - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
+    - php deployer.phar deploy prod
+  tags:
+    - docker
+  only:
+    - master
+  when: manual
