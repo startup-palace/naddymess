@@ -27,7 +27,7 @@
 
     {% include footer.html %}
 
-    <script type="application/javascript" src="/{% if site.data['rev-manifest']['js/naddymess-website.min.js'] %}{{ site.data['rev-manifest']['js/naddymess-website.min.js'] }}{% else %}js/naddymess-website.js{% endif %}"></script>
+    <script type="application/javascript" src="{% if site.data['rev-manifest']['js/naddymess-website.min.js'] %}{{ site.data['rev-manifest']['js/naddymess-website.min.js'] | prepend: "/" | relative_url }}{% else %}{{ "/js/naddymess-website.js" | relative_url }}{% endif %}"></script>
 
     <script type="text/javascript">
       var $buoop = {vs:{i:9,f:20,o:17,s:6},reminder:0};
