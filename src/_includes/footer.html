@@ -1,16 +1,10 @@
-<div class="container text-center">
-  <img src="{{ "/img/logo/failtech.svg" | relative_url }}" width="141" height="75" alt="FailTech" class="img-fluid">
-  <a href="https://www.startup-palace.com" target="_blank">
-    <img src="{{ "/img/logo/startup-palace.svg" | relative_url }}" width="157" height="125" alt="Startup Palace" class="img-fluid">
-  </a>
-</div>
-
 <footer class="site-footer bg-darkest" role="contentinfo">
   <div class="container">
     <div class="copy">
       <a href="mailto:{{ site.email | encode_email }}">Contact</a>
       &copy; Naddymess {{ site.time | date: '%Y' }}<br />
-      {{ site.footer }}
+      {{ site.footer }}<br>
+      Ce site a été pondu par <a href="https://www.startup-palace.com" target="_blank">Startup Palace</a>
     </div>
   </div>
 </footer>
