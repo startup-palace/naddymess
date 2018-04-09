@@ -1,38 +1,21 @@
 ---
 layout: default
 ---
-
-<main class="main pt-4" role="main">
-
-  <div class="container">
-
-    <div class="row">
-      <div class="col-md-9">
-
-        <article class="card mb-4">
-          <header class="card-header text-center">
-            <div class="card-meta">
-              <a href="#"><time class="timeago" datetime="{{ page.fields.published_at }}">{{ page.fields.published_at | localize: "%d %B %Y" }}</time></a>{% comment %} in <a href="#">Journey</a>{% endcomment %}
-            </div>
-            <a href="{{ page.url | relative_url }}">
-              <h1 class="card-title">{{ page.fields.title }}</h1>
-            </a>
-          </header>
-          <a href="{{ page.url | relative_url }}">
-            <img class="card-img" src="{{ page.fields.cover.fields.file.url }}" alt="" />
-          </a>
-          <div class="card-body">
-
-            {{ page.content | extlinks }}
-
-          </div>
-        </article><!-- /.card -->
-
-      </div>
-
-      {% include aside.html %}
-
+<article class="card mb-4">
+  <header class="card-header text-center">
+    <div class="card-meta">
+      <a href="#"><time class="timeago" datetime="{{ page.fields.published_at }}">{{ page.fields.published_at | localize: "%d %B %Y" }}</time></a>{% comment %} in <a href="#">Journey</a>{% endcomment %}
     </div>
-  </div>
+    <a href="{{ page.url | relative_url }}">
+      <h1 class="card-title">{{ page.fields.title }}</h1>
+    </a>
+  </header>
+  <a href="{{ page.url | relative_url }}">
+    <img class="card-img" src="{{ page.fields.cover.fields.file.url }}" alt="" />
+  </a>
+  <div class="card-body">
 
-</main>
+    {{ page.content | extlinks }}
+
+  </div>
+</article><!-- /.card -->
