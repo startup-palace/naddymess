@@ -21,7 +21,7 @@ Pour nous contacter : [envoie-nous un email](mailto:{{ site.email | encode_email
 
 ## Hébergeur, conception et développement
 
-Startup Palace. (Oui bon on n'est pas allé jusqu'à construire notre propre _data center_ (envoyez des sous) donc c'est chez OVH au final...)
+Startup Palace. (Oui bon on n'est pas allé jusqu'à construire notre propre _data center_ — envoyez des sous — donc c'est chez OVH au final...)
 
 ## Données personnelles
 
