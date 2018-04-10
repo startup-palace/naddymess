@@ -25,9 +25,8 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@{{ site.twitter.username }}">
   <meta name="twitter:image:src" content="{{ site.logo | absolute_url }}">
-  {% comment %}<meta name="twitter:title" content="{% if page.fields.title %}{{ page.fields.title | escape }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | escape }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.fields.title %}{{ page.fields.title | escape }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | escape }}{% endif %}">
   <meta name="twitter:description" content="{% if page.fields.description %}{{ page.fields.description }}{% elsif page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:creator" content="">{% endcomment %}
 
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#FFF">
