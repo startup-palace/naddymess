@@ -5,18 +5,11 @@ layout: default
 {% assign sorted_articles = site.articles | sort: 'fields.published_at' | reverse %}
 
 <div class="row">
+
+  {% for article in sorted_articles %}
   <div class="col-md-6">
-
-    {% for article in sorted_articles %}{% assign mod = forloop.index | modulo: 2 %}{% if mod == 1 %}
-    {% include article_preview.html article=article %}
-    {% endif %}{% endfor %}
-
+    {% include article_preview.html article=article order=forloop.index %}
   </div>
-  <div class="col-md-6">
+  {% endfor %}
 
-    {% for article in sorted_articles %}{% assign mod = forloop.index | modulo: 2 %}{% if mod == 0 %}
-    {% include article_preview.html article=article %}
-    {% endif %}{% endfor %}
-
-  </div>
 </div>
