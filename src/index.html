@@ -1,12 +1,16 @@
 ---
 layout: default
+pagination:
+  enabled: true
+  collection: articles
+  sort_field: 'fields:published_at'
+  sort_reverse: true
+  per_page: 8
 ---
-
-{% assign sorted_articles = site.articles | sort: 'fields.published_at' | reverse %}
 
 <div class="row">
 
-  {% for article in sorted_articles %}
+  {% for article in paginator.posts %}
     {% if forloop.index0 == 0 %}
     <div class="col-md-12">
       {% include article_preview.html article=article %}
