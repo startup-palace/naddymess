@@ -1,1 +1,5 @@
 // sass-lint:disable no-important, one-declaration-per-line
+
+.card-body a:not(.btn) {
+  text-decoration: underline;
+}
