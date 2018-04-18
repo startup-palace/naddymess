@@ -15,7 +15,8 @@ variables:
     - 'echo url: \"$URL\" >> _config.yml'
     - 'echo ga: $GA >> _config.yml'
     - node contentful.js
-    - ./node_modules/.bin/gulp --env production
+    - npm run build
+    - bundle exec jekyll build -t
   cache:
     paths:
       - node_modules/
