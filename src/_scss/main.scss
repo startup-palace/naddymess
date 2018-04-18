@@ -5,13 +5,14 @@
 // -----------------------------
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|PT+Serif:700');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|Playfair+Display:700');
 //@import "~font-awesome/scss/font-awesome";
 
 // Core variables and mixins
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "milo/variables";
+@import "_variables.scss";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/print";
