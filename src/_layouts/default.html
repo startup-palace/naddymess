@@ -27,7 +27,7 @@
 
     {% include footer.html %}
 
-    <script type="application/javascript" src="{% if site.data['rev-manifest']['js/naddymess-website.min.js'] %}{{ site.data['rev-manifest']['js/naddymess-website.min.js'] | prepend: "/" | relative_url }}{% else %}{{ "/js/naddymess-website.js" | relative_url }}{% endif %}"></script>
+    <script type="application/javascript" src="{{ site.data['manifest']['main.js'] | prepend: "/" | relative_url }}"></script>
 
     <script type="text/javascript">
       var $buoop = {vs:{i:9,f:20,o:17,s:6},reminder:0};
@@ -42,10 +42,6 @@
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function(event) {
-        cookieChoices.showCookieConsentBar('En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de Cookies pour réaliser des statistiques de visites anonymes.', '×', 'En savoir plus', 'http://www.cnil.fr/vos-droits/vos-traces/les-cookies/');
-      });
-
       window['ga-disable-GA_TRACKING_ID'] = true;
       if (document.cookie.match(new RegExp('displayCookieConsent=([^;]+)'))) {
         window['ga-disable-GA_TRACKING_ID'] = false;

@@ -32,7 +32,7 @@
   <!-- Color the status bar on mobile devices -->
   <meta name="theme-color" content="#FFF">
   <meta name="msapplication-TileImage" content="/img/meta/mstile-144x144.png">
-  <link type="text/css" href="{% if site.data['rev-manifest']['css/naddymess-website.min.css'] %}{{ site.data.['rev-manifest']['css/naddymess-website.min.css'] | prepend: "/" | relative_url }}{% else %}{{ "/css/naddymess-website.css" | relative_url }}{% endif %}" rel="stylesheet">
+  <link type="text/css" href="{{ site.data.['manifest']['main.css'] | prepend: "/" | relative_url }}" rel="stylesheet">
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
 </head>
