@@ -6,4 +6,5 @@ node_modules
 src/_temp
 src/_articles
 src/_tags
-src/_data/rev-manifest.json
+src/_data/manifest.json
+src/dist/
