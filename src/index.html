@@ -5,7 +5,7 @@ pagination:
   collection: articles
   sort_field: 'fields:published_at'
   sort_reverse: true
-  per_page: 8
+  per_page: 7
   trail:
     before: 2
     after: 2
@@ -14,7 +14,7 @@ pagination:
 <div class="row">
 
   {% for article in paginator.posts %}
-    {% if forloop.index0 == 0 %}
+    {% if forloop.index0 == 0 and paginator.page == 1 %}
     <div class="col-md-12">
       {% include article_preview.html article=article %}
     </div>
