@@ -1,6 +1,6 @@
 // sass-lint:disable-all
 
-$blue:    #00cdb6;
+$blue:    #2780e3;
 $indigo:  #6610f2;
 $purple:  #613d7c;
 $pink:    #e83e8c;
@@ -25,7 +25,7 @@ $theme-colors: (
 );
 
 // Fonts
-$font-family-sans-serif: 'Lato','PT Sans Caption', sans-serif;
+$font-family-sans-serif: 'PT Sans Caption', sans-serif;
 $font-family-serif:      'PT Serif', serif;
 $font-family-base:       $font-family-sans-serif;
 
@@ -34,10 +34,10 @@ $headings-font-family:   $font-family-serif;
 $headings-font-weight:   700;
 
 // Font sizes
-$font-size-base: 1rem; //.875rem;
+$font-size-base: .875rem;
 
 // Grid
-$grid-gutter-width: 10px;
+$grid-gutter-width: 20px;
 
 $container-max-widths: (
   sm: 540px,
