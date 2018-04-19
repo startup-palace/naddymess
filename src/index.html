@@ -9,11 +9,11 @@ layout: default
   {% for article in sorted_articles %}
     {% if forloop.index0 == 0 %}
     <div class="col-md-12">
-      {% include article_preview.html article=article order=forloop.index %}
+      {% include article_preview.html article=article %}
     </div>
     {% else %}
     <div class="col-md-6">
-      {% include article_preview.html article=article order=forloop.index %}
+      {% include article_preview.html article=article %}
     </div>
     {% endif %}
   {% endfor %}
