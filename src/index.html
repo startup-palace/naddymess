@@ -7,9 +7,15 @@ layout: default
 <div class="row">
 
   {% for article in sorted_articles %}
-  <div class="col-md-6">
-    {% include article_preview.html article=article order=forloop.index %}
-  </div>
+    {% if forloop.index0==0 %}
+    <div class="col-md-12">
+      {% include article_preview.html article=article order=forloop.index %}
+    </div>
+    {% else %}
+    <div class="col-md-6">
+      {% include article_preview.html article=article order=forloop.index %}
+    </div>
+    {% endif %}
   {% endfor %}
 
 </div>
