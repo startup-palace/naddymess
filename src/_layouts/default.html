@@ -25,6 +25,8 @@
 
     </main>
 
+    {% include pagination.html %}
+
     {% include footer.html %}
 
     <script type="application/javascript" src="{{ site.data['manifest']['main.js'] | prepend: "/" | relative_url }}"></script>

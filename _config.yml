@@ -74,3 +74,7 @@ defaults:
       type: "tags"
     values:
       layout: "tags"
+
+pagination:
+  enabled: true
+  title: ':title - Page :num'

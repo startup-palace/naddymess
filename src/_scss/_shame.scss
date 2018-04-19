@@ -4,3 +4,10 @@
   text-decoration: underline;
   color: $naddymess;
 }
+
+.site-pagination {
+  background: lighten($gray-200, 3%);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+}
