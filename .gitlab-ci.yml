@@ -7,7 +7,7 @@ variables:
 .build: &build
   stage: build
   image: ruby:2.4.3-stretch
-  before_script:
+  script:
     - curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
     - apt-get install -y nodejs
     - npm install
@@ -33,16 +33,16 @@ build_preprod:
   variables:
     URL: $PREPROD_URL
     GA: "false"
-  script:
-    - ls build/
+  before_script:
+    - mv src/_robots.preprod.txt src/robots.txt
 
 build_prod:
   <<: *build
   variables:
     URL: $PROD_URL
     GA: "true"
-  script:
-    - ls build/
+  before_script:
+    - 'true'
   only:
     - master
 
