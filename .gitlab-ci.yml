@@ -1,6 +1,6 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
-  NODE_VERSION: 9
+  NODE_VERSION: 10
   PREPROD_URL: https://naddymess.spapp.fr
   PROD_URL: https://www.naddymess.fr
 
