@@ -9,6 +9,7 @@ const yaml = require('js-yaml');
 const locale = process.env.CONTENTFUL_LOCALE || 'fr-FR';
 const space = process.env.CONTENTFUL_SPACE;
 const accessToken = process.env.CONTENTFUL_TOKEN;
+const preview = process.env.CONTENTFUL_PREVIEW || '0';
 const outputDir = process.env.OUTPUT_DIR || 'src';
 const contentIds = ['post', 'tag'];
 const contentFields = { 'post': 'content', 'tag': 'description' };
@@ -34,11 +35,14 @@ function writeEntry(item) {
 
 /**********************************************/
 
+const host = 'preview.contentful.com';
+const hostFlag = (preview === '1' || preview === 1 || preview === true) ? { host } : {};
 const client = contentful.createClient({
   accessToken,
   space,
   resolveLinks: true,
   locale,
+  ...hostFlag,
 });
 
 contentIds.forEach(type => {

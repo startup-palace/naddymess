@@ -26,6 +26,7 @@
 You can also set the following environment variables:
 
 - `CONTENTFUL_LOCALE` (default = `fr-FR`)
+- `CONTENTFUL_PREVIEW` (default = `0`)
 - `OUTPUT_DIR` (default = `src`)
 
 ## How to deploy the project
