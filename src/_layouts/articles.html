@@ -13,6 +13,7 @@ layout: default
   <a href="{{ page.url | relative_url }}">
     <img class="card-img" src="{{ page.fields.cover.fields.file.url }}" alt="" />
   </a>
+  {% if page.fields.cover.fields.description %}<p class="font-italic text-right">{{ page.fields.cover.fields.description }}</p>{% endif %}
   <div class="card-body">
 
     {{ page.content | extlinks }}
