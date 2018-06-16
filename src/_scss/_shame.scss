@@ -11,3 +11,7 @@
   padding-bottom: 2rem;
   margin-top: 3rem;
 }
+
+.card-body img {
+  @include img-fluid;
+}
