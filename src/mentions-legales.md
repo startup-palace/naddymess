@@ -13,7 +13,6 @@ Startup Palace S.A.S. est une société par actions simplifiée enregistrée au 
 
 ## Directeurs de la publication
 
-- Antoine Dumont, en qualité de Président de la S.A.S. Startup Palace
 - Mathieu Le Gac, en qualité de Co-Fondateur Associé de la S.A.S. Startup Palace
 - Céline Josse, en qualité de Responsable Communication (et pour avoir un peu de parité)
 
