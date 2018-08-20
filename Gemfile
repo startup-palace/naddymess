@@ -19,7 +19,7 @@ gem "jekyll", "~> 3.8.3"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-email-protect", "1.0.3"
+  gem "jekyll-email-protect", "1.1.0"
   gem "jekyll-paginate-v2", "1.9.4"
 end
 
