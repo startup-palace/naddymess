@@ -43,12 +43,12 @@ $(window).scroll(function() {
 
 function onScroll() {
   if ($(this).scrollTop() > 0) {
-    $('.navbar').addClass('fixed-top navbar-dark bg-black');
-    $('.navbar').removeClass('absolute-top navbar-light bg-white');
+    $('.navbar').addClass('fixed-top');
+    $('.navbar').removeClass('absolute-top');
   }
   else {
-    $('.navbar').addClass('absolute-top navbar-light bg-white');
-    $('.navbar').removeClass('fixed-top navbar-dark bg-black');
+    $('.navbar').addClass('absolute-top');
+    $('.navbar').removeClass('fixed-top');
   }
 }
 
