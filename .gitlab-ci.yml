@@ -3,6 +3,7 @@ variables:
   NODE_VERSION: 10
   PREPROD_URL: https://naddymess.spapp.fr
   PROD_URL: https://www.naddymess.fr
+  CONTENTFUL_LOCALE: "fr-FR"
 
 .build: &build
   stage: build
@@ -14,7 +15,8 @@ variables:
     - bundle install
     - 'echo url: \"$URL\" >> _config.yml'
     - 'echo ga: $GA >> _config.yml'
-    - node contentful.js
+    - CONTENTFUL_CONTENT_TYPE_ID="post" OUTPUT_DIR="src/_articles" npm run contentful2md
+    - CONTENTFUL_CONTENT_TYPE_ID="tag" OUTPUT_DIR="src/_tags" npm run contentful2md
     - npm run build
     - bundle exec jekyll build -t
   cache:
