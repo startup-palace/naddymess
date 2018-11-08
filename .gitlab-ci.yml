@@ -1,6 +1,6 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
-  NODE_VERSION: 10
+  NODE_VERSION: 11
   CONTENTFUL_LOCALE: "fr-FR"
 
 .build: &build
