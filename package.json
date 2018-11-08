@@ -2,6 +2,7 @@
   "name": "naddymess-website",
   "version": "1.0.0",
   "description": "",
+  "license": "Apache-2.0",
   "private": true,
   "scripts": {
     "build": "webpack",
