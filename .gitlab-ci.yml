@@ -1,8 +1,6 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
   NODE_VERSION: 10
-  PREPROD_URL: https://naddymess.spapp.fr
-  PROD_URL: https://www.naddymess.fr
   CONTENTFUL_LOCALE: "fr-FR"
 
 .build: &build
