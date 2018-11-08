@@ -19,15 +19,7 @@
 
 ### How to fetch content from Contentful
 
-- get the ID your Contentful space
-- get an access token to your Contentful space
-- `CONTENTFUL_SPACE="<your-space-id>" CONTENTFUL_TOKEN="<your-access-token>" node contentful.js`
-
-You can also set the following environment variables:
-
-- `CONTENTFUL_LOCALE` (default = `fr-FR`)
-- `CONTENTFUL_PREVIEW` (default = `0`)
-- `OUTPUT_DIR` (default = `src`)
+See [contentful2md](https://github.com/dsferruzza/contentful2md).
 
 ## How to deploy the project
 
