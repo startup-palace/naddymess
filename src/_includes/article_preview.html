@@ -1,7 +1,7 @@
 <article class="card mb-2">
   <header class="card-header">
     <div class="card-meta">
-      <a href="#"><time class="timeago" datetime="{{ article.fields.published_at }}">{{ article.fields.published_at | localize: "%d %B %Y" }}</time></a>{% comment %} in <a href="#">Journey</a>{% endcomment %}
+      <time class="timeago" datetime="{{ article.fields.published_at }}" title="{{ article.fields.published_at | localize: "%d %B %Y" }}">{{ article.fields.published_at | localize: "%d %B %Y" }}</time>{% comment %} in <a href="#">Journey</a>{% endcomment %}
     </div>
     <a href="{{ article.url | relative_url }}">
       <h4 class="card-title">{{ article.fields.title }}</h4>
