@@ -50,7 +50,7 @@ deploy_preprod:
   stage: deploy
   dependencies:
     - build_preprod
-  image: php:7.2-cli
+  image: php:7.3-cli
   environment:
     name: preprod
     url: $PREPROD_URL
@@ -66,7 +66,7 @@ deploy_prod:
   stage: deploy
   dependencies:
     - build_prod
-  image: php:7.2-cli
+  image: php:7.3-cli
   environment:
     name: prod
     url: $PROD_URL
