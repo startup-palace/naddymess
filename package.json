@@ -30,6 +30,6 @@
     "webpack-manifest-plugin": "2.0.4"
   },
   "dependencies": {
-    "contentful2md": "1.0.1"
+    "contentful2md": "1.0.2"
   }
 }
