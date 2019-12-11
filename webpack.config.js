@@ -35,7 +35,15 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           "css-loader?sourceMap",
-          "sass-loader?sourceMap&outputStyle=compressed",
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                outputStyle: 'compressed',
+              }
+            },
+          },
         ],
       }
     ],

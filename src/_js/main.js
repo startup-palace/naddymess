@@ -34,7 +34,7 @@ timeago.register('fr', function(number, index) {
     ['il y a %s ans', 'dans %s ans'],
   ][index];
 });
-timeago(null, 'fr').render(document.querySelectorAll('.timeago'));
+timeago.render(document.querySelectorAll('.timeago'), 'fr');
 
 // Navbar behaviour on scroll
 $(window).scroll(function() {
