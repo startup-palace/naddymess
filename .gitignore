@@ -1,6 +1,7 @@
 build
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
 .DS_Store
 node_modules
 src/_temp
