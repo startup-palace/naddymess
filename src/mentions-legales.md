@@ -9,7 +9,7 @@ Ivre, il/elle clique sur les mentions légales d'un site parodique.
 
 ## Éditeur
 
-Startup Palace S.A.S. est une société par actions simplifiée enregistrée au RCS de Nantes : 812 479 020. Le présent site est la propriété de la société Startup Palace dont le siège est situé au 18 rue Scribe 44000 Nantes.
+Startup Palace S.A.S. est une société par actions simplifiée enregistrée au RCS de Nantes : 812 479 020. Le présent site est la propriété de la société Startup Palace dont le siège est situé au 4 rue Voltaire 44000 Nantes.
 
 ## Directeurs de la publication
 
@@ -25,4 +25,4 @@ Startup Palace. (Oui bon on n'est pas allé jusqu'à construire notre propre _da
 ## Données personnelles
 
 Conformément aux dispositions de la loi du 6 janvier 1978 relative aux fichiers, à l’informatique et aux libertés, vous disposez d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant.
-Ce droit s’exerce auprès de : Startup Palace, 18 rue Scribe 44000 Nantes.
+Ce droit s’exerce auprès de : Startup Palace, 4 rue Voltaire 44000 Nantes.
