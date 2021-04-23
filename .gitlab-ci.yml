@@ -9,7 +9,7 @@ variables:
   script:
     - curl -sL https://deb.nodesource.com/setup_$NODE_VERSION.x | bash -
     - apt-get install -y nodejs
-    - npm install
+    - npm ci
     - bundle install
     - 'echo url: \"$URL\" >> _config.yml'
     - 'echo ga: $GA >> _config.yml'
