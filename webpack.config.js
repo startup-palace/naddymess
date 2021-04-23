@@ -1,5 +1,5 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const ManifestPlugin = require("webpack-manifest-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
@@ -55,7 +55,7 @@ module.exports = {
       filename: "app.[chunkhash].css",
       chunkFilename: "[id].css",
     }),
-    new ManifestPlugin({
+    new WebpackManifestPlugin({
       fileName: manifest,
       publicPath: "dist/",
     }),
