@@ -1,6 +1,6 @@
 variables:
   DEBIAN_FRONTEND: noninteractive
-  NODE_VERSION: 14
+  NODE_VERSION: "14"
   CONTENTFUL_LOCALE: "fr-FR"
 
 .build: &build
@@ -25,16 +25,14 @@ variables:
     name: "$CI_PROJECT_NAME-$CI_COMMIT_SHA"
     paths:
       - build/
-  tags:
-    - docker
 
-build_preprod:
-  <<: *build
-  variables:
-    URL: $PREPROD_URL
-    GA: "false"
-  before_script:
-    - mv src/_robots.preprod.txt src/robots.txt
+# build_preprod:
+#   <<: *build
+#   variables:
+#     URL: $PREPROD_URL
+#     GA: "false"
+#   before_script:
+#     - mv src/_robots.preprod.txt src/robots.txt
 
 build_prod:
   <<: *build
@@ -46,35 +44,16 @@ build_prod:
   only:
     - master
 
-deploy_preprod:
-  stage: deploy
-  dependencies:
-    - build_preprod
-  image: php:7.3-cli
-  environment:
-    name: preprod
-    url: $PREPROD_URL
-  script:
-    - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
-    - php deployer.phar deploy preprod
-  tags:
-    - docker
-  only:
-    - master
-
-deploy_prod:
+pages:
   stage: deploy
   dependencies:
     - build_prod
-  image: php:7.3-cli
+  image: alpine
   environment:
     name: prod
     url: $PROD_URL
   script:
-    - curl -LO https://deployer.org/releases/v4.2.1/deployer.phar
-    - php deployer.phar deploy prod
-  tags:
-    - docker
+    - mv build/ public/
   only:
     - master
   when: manual
