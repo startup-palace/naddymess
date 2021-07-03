@@ -54,6 +54,9 @@ pages:
     url: $PROD_URL
   script:
     - mv build/ public/
+  artifacts:
+    paths:
+      - public/
   only:
     - master
   when: manual
