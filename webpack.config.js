@@ -1,8 +1,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin").default;
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const webpack = require("webpack");
 
 const dist = path.resolve(__dirname, "./src/dist")
 const manifest = path.resolve(__dirname, "./src/_data/manifest.json")
